@@ -1,0 +1,27 @@
+{
+  "name": "app-store-validator",
+  "version": "0.1.0",
+  "description": "Validate app on Play/iTunes app stores",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha test -t 3000"
+  },
+  "keywords": [
+    "app",
+    "store",
+    "itunes",
+    "play",
+    "validate"
+  ],
+  "author": "Guy Vider",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "request": "^2.53.0"
+  },
+  "devDependencies": {
+    "debug": "^2.1.3",
+    "ink-docstrap": "^0.5.2",
+    "mocha": "^2.2.1"
+  }
+}
