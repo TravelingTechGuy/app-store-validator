@@ -1,17 +1,18 @@
 {
   "name": "app-store-validator",
   "version": "0.1.0",
-  "description": "Validate app on Play/iTunes app stores",
+  "description": "Validate/find an app on Play/iTunes app stores",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha test -t 3000"
+    "test": "mocha tests -t 5000"
   },
   "keywords": [
     "app",
     "store",
     "itunes",
     "play",
-    "validate"
+    "validate",
+    "search"
   ],
   "author": "Guy Vider",
   "license": "MIT",

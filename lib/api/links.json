@@ -1,0 +1,10 @@
+{
+    "get": {
+        "itunesStore": "https://itunes.apple.com/lookup?id=",
+        "playStore": "https://play.google.com/store/apps/details?hl=en&id="
+    },
+    "search": {
+        "itunesStore": "https://itunes.apple.com/search?entity=software&term=",
+        "playStore": "https://play.google.com/store/search?hl=en&c=apps&q="
+    }
+}
