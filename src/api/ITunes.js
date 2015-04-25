@@ -1,29 +1,34 @@
 'use strict';
 
+var debug = require('debug')('validate:itunes');
+var request = require('request');
+var links;
+
+
+/**
+ * Process the JSON returned from iTunes API
+ * @param  {Object} app JSON reply
+ * @return {Object} result object
+ */
+var processResult = function(app) {
+    return {
+        name: app.trackName,
+        version: app.version,
+        company: app.artistName,
+        category: app.primaryGenreName,
+        description: app.description,
+        avgUserRating: app.averageUserRating,
+        ratingsCount: app.userRatingCount
+    };
+};
+
 /**
  * @class iTunesAPI
  */
-var iTunesAPI = function() {
-	var debug = require('debug')('validate:itunes');
-    var request = require('request');
-    var links = require('./links');
-
-	/**
-     * Process the JSON returned from iTunes API
-     * @param  {Object} app JSON reply
-     * @return {Object} result object
-     */
-    var processResult = function(app) {
-        return {
-            name: app.trackName,
-            version: app.version,
-            company: app.artistName,
-            category: app.primaryGenreName,
-            description: app.description,
-            avgUserRating: app.averageUserRating,
-            ratingsCount: app.userRatingCount
-        };
-    };
+export default class ITunes {
+    constructor(urls) {
+        links = urls;
+    }
 
     /**
      * Validate iTunes App
@@ -31,12 +36,12 @@ var iTunesAPI = function() {
      * @param  {Function} callback   callback function
      * @returns {Function}  function with error and/or result
      */
-    this.get = function(appStoreId, callback) {
+    get(appStoreId, callback) {
         //if user included the 'id' part in the id, remove it
         if(appStoreId.indexOf('id') === 0) {
             appStoreId = appStoreId.substr(2);
         }
-        var url = links.get.itunesStore + appStoreId;
+        var url = links.get + appStoreId;
         var result = null;
         request(url, {json: true}, function(error, response, body) {
             debug(url, error, response.statusCode);
@@ -45,7 +50,7 @@ var iTunesAPI = function() {
                 result = processResult(body.results[0]);  //take only first result
             }
             else {
-                error = new Error('app ' + appStoreId + ' not found');
+                error = new Error(`app ${appStoreId} not found`);
             }
             return callback(error, result);
         });
@@ -57,8 +62,8 @@ var iTunesAPI = function() {
      * @param  {Function} callback callback function
      * @returns {Function}  function with error and/or result
      */
-    this.search = function(appName, callback) {
-        var url = links.search.itunesStore + appName;
+    search(appName, callback) {
+        var url = links.search + appName;
         var result = [];
         request(url, {json: true}, function(error, response, body) {
             debug(url, error, response.statusCode);
@@ -69,11 +74,9 @@ var iTunesAPI = function() {
                 });
             }
             else {
-                error = new Error('app ' + appName + ' not found');
+                error = new Error(`app ${appStoreId} not found`);
             }
             return callback(error, result);
         });
     };
-};
-
-module.exports = new iTunesAPI();
+}
