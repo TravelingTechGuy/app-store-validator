@@ -4,7 +4,9 @@
   "description": "Validate/find an app on Play/iTunes app stores",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "mocha tests -t 10000"
+    "build": "gulp",
+    "test": "gulp test",
+    "watch": "gulp watch"
   },
   "keywords": [
     "app",
