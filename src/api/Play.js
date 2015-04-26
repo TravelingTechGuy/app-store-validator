@@ -66,7 +66,7 @@ var processSearchResults = function(body) {
 };
 
 /**
- * @class PlayAPI
+ * @class Play
  */
 export default class Play {
     constructor(urls) {

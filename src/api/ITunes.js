@@ -23,7 +23,7 @@ var processResult = function(app) {
 };
 
 /**
- * @class iTunesAPI
+ * @class iTunes
  */
 export default class ITunes {
     constructor(urls) {
