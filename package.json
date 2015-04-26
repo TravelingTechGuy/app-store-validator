@@ -1,6 +1,6 @@
 {
   "name": "app-store-validator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validate/find an app on Play/iTunes app stores",
   "main": "./lib/index.js",
   "scripts": {
