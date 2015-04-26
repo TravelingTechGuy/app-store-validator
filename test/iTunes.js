@@ -7,6 +7,7 @@ var appStoreValidator = require('../lib');
 describe('iTunes store validation tests', function() {
     var appName = 'Facebook';
     var itunesAppId = '284882215';
+    this.timeout(10000);
 
     it('should verify ios app', function(done) {
         appStoreValidator.iTunes.get(itunesAppId, function(error, result) {
@@ -25,7 +26,6 @@ describe('iTunes store validation tests', function() {
     });
 
     it('should search for ios apps, and find at least one', function(done) {
-        this.timeout(10000);
         appStoreValidator.iTunes.search(appName, function(error, result) {
             debug(result.length && result[0]);
             assert(result.length > 0, 'could not find ' + appName);
