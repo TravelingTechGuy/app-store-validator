@@ -2,7 +2,7 @@
 
 import ITunes from './api/ITunes';
 import Play from './api/Play';
-import {iTunes as iTunesUrls, Play as playUrls} from './urls';
+import {iTunes as iTunesUrls, Play as playUrls} from './api/urls';
 
 /**
  * @class AppStoreValidator
