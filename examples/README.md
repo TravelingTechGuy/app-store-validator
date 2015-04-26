@@ -3,7 +3,7 @@ This folder contains 2 sample files showing how to use the library, in regular J
 
 ###ES5
 ```javascript
-var appStoreValidator = require('../lib');
+var appStoreValidator = require('app-store-validator');
 
 var iTunesFacebook = '284882215';
 appStoreValidator.iTunes.get(iTunesFacebook, function(error, result) {
@@ -18,7 +18,7 @@ appStoreValidator.iTunes.get(iTunesFacebook, function(error, result) {
 
 ###ES6
 ```javascript
-import appStoreValidator from '../lib';
+import appStoreValidator from 'app-store-validator';
 
 const iTunesFacebook = '284882215';
 appStoreValidator.iTunes.get(iTunesFacebook, (error, result) => {

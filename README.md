@@ -19,7 +19,7 @@ Where:
 
 ###Sample code
 ```javascript
-var appStoreValidator = require('../lib');
+var appStoreValidator = require('app-store-validator');
 
 var iTunesFacebook = '284882215';
 appStoreValidator.iTunes.get(iTunesFacebook, function(error, result) {
