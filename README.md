@@ -1,5 +1,6 @@
 # App Store Validator
  [![NPM](https://nodei.co/npm/app-store-validator.png)](https://nodei.co/npm/app-store-validator/)
+
 Are you building a solution for app developers? Does your form require an app store reference?
 Use App Store Validator to find an app on both (iTunes/Play) app stores, or search for an app by name.
 
