@@ -1,23 +1,14 @@
-#App Store Validator
+# App Store Validator
 Are you building a solution for app developers? Does your form require an app store reference?
 Use App Store Validator to find an app on both (iTunes/Play) app stores, or search for an app by name.
 
-##Usage
-###Installation
+## Usage
+### Installation
 ```bash
 > npm install app-store-validator --save
 ```
 
-###Supported functions
-- ***storeName.get***(*appStoreId*, callback) - get details about a specific app
-- ***storeName*.search**(*appName*, callback) - returns array of found apps
-
-Where:
-- *storeName* is 'Play' or 'iTunes'
-- *appStoreId* is either an iTunes ID (9 digits), or a Java package ID (com.name1.name2)
-- *appName* is a string
-
-###Sample code
+### Sample code
 ```javascript
 var appStoreValidator = require('app-store-validator');
 
@@ -32,7 +23,16 @@ appStoreValidator.iTunes.get(iTunesFacebook, function(error, result) {
 });
 ```
 
-###Sample result
+###Supported functions
+- ***storeName.get***(*appStoreId*, callback) - get details about a specific app
+- ***storeName*.search**(*appName*, callback) - returns array of found apps
+
+Where:
+- *storeName* is 'Play' or 'iTunes'
+- *appStoreId* is either an iTunes ID (9 digits), or a Java package ID (com.name1.name2)
+- *appName* is a string
+
+### Sample result
 ```javascript
 {
   name: 'Facebook',
@@ -47,7 +47,7 @@ appStoreValidator.iTunes.get(iTunesFacebook, function(error, result) {
 
 PS: results accurate at time of writing this doc.
 
-##Building
+## Building
 1. The module is written in ES6, complied by [Babel](https://babeljs.io/) into ES5.
 2. It uses [Mocha](http://mochajs.org/) for unit tests.
 3. It uses [ESLint](http://eslint.org/) to lint the code.
