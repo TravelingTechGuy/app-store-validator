@@ -43,7 +43,7 @@ export default class ITunes {
         }
         var url = links.get + appStoreId;
         var result = null;
-        request(url, {json: true}, function(error, response, body) {
+        request(url, {json: true}, (error, response, body) => {
             debug(url, error, response.statusCode);
             debug(body);
             if(!error && response.statusCode === 200 && body.results) {
@@ -65,7 +65,7 @@ export default class ITunes {
     search(appName, callback) {
         var url = links.search + appName;
         var result = [];
-        request(url, {json: true}, function(error, response, body) {
+        request(url, {json: true}, (error, response, body) => {
             debug(url, error, response.statusCode);
             debug(body);
             if(!error && response.statusCode === 200 && body.results && body.results.length > 0) {
@@ -74,7 +74,7 @@ export default class ITunes {
                 });
             }
             else {
-                error = new Error(`app ${appStoreId} not found`);
+                error = new Error(`app ${appName} not found`);
             }
             return callback(error, result);
         });

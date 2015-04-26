@@ -82,14 +82,14 @@ export default class Play {
     get(appStoreId, callback) {
         var url = links.get + appStoreId;
         var result = null;
-        request(url, function(error, response, body) {
+        request(url, (error, response, body) => {
             debug(url, error, response.statusCode);
             debug(body);
             if(!error && response.statusCode === 200) {
                 result = processResult(body);
             }
             else {
-                error = new Error('app ' + appStoreId + ' not found');
+                error = new Error(`app ${appStoreId} not found`);
             }
             return callback(error, result);
         });
@@ -104,14 +104,14 @@ export default class Play {
     search(appName, callback) {
         var url = links.search + appName;
         var result = [];
-        request(url, function(error, response, body) {
+        request(url, (error, response, body) => {
             debug(url, error, response.statusCode);
             debug(body);
             if(!error && response.statusCode === 200) {
                 result = processSearchResults(body);
             }
             else {
-                error = new Error('app ' + appName + ' not found');
+                error = new Error(`app ${appName} not found`);
             }
             return callback(error, result);
         });
