@@ -1,6 +1,6 @@
 {
   "name": "app-store-validator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Validate/find an app on Play/iTunes app stores",
   "main": "./lib/index.js",
   "scripts": {
@@ -26,8 +26,8 @@
     "debug": "^2.1.3",
     "gulp": "^3.8.11",
     "gulp-babel": "^5.1.0",
+    "gulp-eslint": "^0.9.0",
     "gulp-mocha": "^2.0.1",
-    "ink-docstrap": "^0.5.2",
     "mocha": "^2.2.1"
   }
 }
