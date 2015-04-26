@@ -48,11 +48,11 @@ appStoreValidator.iTunes.get(iTunesFacebook, function(error, result) {
 PS: results accurate at time of writing this doc.
 
 ##Building
-1. The module is written in ES6, complied by [Babel](https://babeljs.io/) into ES5
-2. It uses [Mocha](http://mochajs.org/) for unit tests
-3. It uses [ESLint](http://eslint.org/) to lint the code
-4. It uses [Gulp](http://gulpjs.com/) to build the module
-5. And since Google Play Store does not have a (documented) API, it uses [Cheerio](https://github.com/cheeriojs/cheerio) to scrape the store
+1. The module is written in ES6, complied by [Babel](https://babeljs.io/) into ES5.
+2. It uses [Mocha](http://mochajs.org/) for unit tests.
+3. It uses [ESLint](http://eslint.org/) to lint the code.
+4. It uses [Gulp](http://gulpjs.com/) to build the module.
+5. And since Google Play Store does not have a (documented) API, it uses [Cheerio](https://github.com/cheeriojs/cheerio) to scrape the store.
 
 To build the code:
 ```bash
@@ -67,7 +67,7 @@ To build the code:
 
 (The MIT License)
 
-Copyright (c) 2015 Guy Vider (Traveling Tech Guy)
+Copyright (c) 2015 Guy Vider [Traveling Tech Guy](http://TravelingTechGuy.com)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
