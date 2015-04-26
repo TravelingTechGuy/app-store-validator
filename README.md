@@ -23,7 +23,7 @@ appStoreValidator.iTunes.get(iTunesFacebook, function(error, result) {
 });
 ```
 
-###Supported functions
+### Supported functions
 - ***storeName.get***(*appStoreId*, callback) - get details about a specific app
 - ***storeName*.search**(*appName*, callback) - returns array of found apps
 
