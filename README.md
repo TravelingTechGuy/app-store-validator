@@ -7,7 +7,7 @@ Use App Store Validator to find an app on both (iTunes/Play) app stores, or sear
 ## Usage
 ### Installation
 ```bash
-> npm install app-store-validator --save
+$ npm i app-store-validator --save
 ```
 
 ### Sample code
@@ -58,11 +58,11 @@ PS: results accurate at time of writing this doc.
 
 To build the code:
 ```bash
-> git clone ...
-> cd app-store-validator
-> npm i
-> npm run build    #lint and build
-> npm run test     #run unit tests
+$ git clone https://github.com/TravelingTechGuy/app-store-validator.git
+$ cd app-store-validator
+$ npm i
+$ npm run build    #lint and build
+$ npm run test     #run unit tests
 ```
 
 ## License
